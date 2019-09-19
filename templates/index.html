@@ -8,8 +8,9 @@
 		<ul>
 		{% for element in objects_list %}
 
-		<li> Post :{{ element.title }} 
-			Author: {{element.author }}
+		<li>
+		<a href="{% url 'detail' element.id %}"> Post :{{ element.title }} </a> 
+			Post : {{element.title }}
 		      </li>
 
 		{% endfor %}
